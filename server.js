@@ -15,7 +15,7 @@ const b5_text = ["Documents", "दस्तावेज़", "ದಾಖಲೆಗ
 const b6_text = ["Description", "विवरण", "ವಿವರಣೆ"]
 const b1_text = ["Title", "विवरण", 'ಶೀರ್ಷಿಕೆ']
 const sb3_text = ["Age", "विउम्र ", "ವಯಸ್ಸು "]
-
+//sample change
 app.post('/:lang/scheme',async (req,res)=>{
     const lang=parseInt(req.params.lang)
     var img= await nHTI({
