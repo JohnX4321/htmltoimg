@@ -32,6 +32,23 @@ app.post('/:lang/scheme',async (req,res)=>{
     res.end(img,'binary');
 });
 
+app.get('/test',async (req,res)=>{
+    var img= await nHTI({
+        html: `<body><style>table,th,td { border: 1px solid black; border-collapse: collapse; align-content: center; text-align: center; }</style><table style="width: 100%;height: 100%;">
+                <tr><td>A</td><td>B</td></tr>
+                <tr><td>C</td><td>D</td></tr>
+                <tr><td>E</td><td>F</td></tr>
+                <tr><td>G</td><td>H</td></tr>
+                <tr><td>I</td><td>J</td></tr>
+                <tr><td>K</td><td>L</td></tr>
+</table></body>`
+    });
+    res.contentType('image/png')
+    res.end(img,'binary');
+});
+
+
+
 app.post('/:lang/schol',async (req,res)=>{
     const lang=parseInt(req.params.lang)
     var img= await nHTI({
